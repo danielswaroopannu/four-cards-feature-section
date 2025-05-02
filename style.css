@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  color: hsl(234, 12%, 34%);
+  font-weight: 200;
+  margin: 0;
+}
+h2 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 700;
+  color: hsl(234, 12%, 34%);
+  margin: 5px 0;
+}
+p.subtitle {
+  text-align: center;
+  max-width: 600px;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 40px;
+}
+.cross-row {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* <--- Vertically center Supervisor & Calculator */
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+.side-column {
+  flex: 0 0 270px;
+  min-width: 270px;
+}
+.center-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0 0 270px;
+  min-width: 270px;
+}
+.card {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border-top: 5px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+}
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+}
+.card p {
+  margin: 0;
+  color: hsl(212, 6%, 44%);
+  font-size: 12px;
+  flex-grow: 1;
+}
+.icon {
+  width: 40px;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+/* Color borders */
+.supervisor {
+  border-top-color: hsl(180, 62%, 55%);
+}
+.team-builder {
+  border-top-color: hsl(0, 78%, 62%);
+}
+.calculator {
+  border-top-color: hsl(212, 86%, 64%);
+}
+.karma {
+  border-top-color: hsl(34, 97%, 64%);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 20px 10px;
+    }
+  .cross-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .side-column,
+  .center-column {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  h1, h2 {
+    font-size: 22px;
+  }
+
+  footer {
+    position: initial;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
